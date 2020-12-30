@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e5eff5;
+  margin: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 4rem);
+}
+
+main {
+  max-width: 600px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas: "top" "bLeft" "bRight";
+}
+
+.first {
+  grid-area: top;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.second {
+  grid-area: bLeft;
+}
+
+.third {
+  grid-area: bRight;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "top top" "bLeft bRight";
+  }
+
+  .second {
+    grid-area: bLeft;
+    border-bottom-left-radius: 0.5rem;
+  }
+
+  .third {
+    grid-area: bRight;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0.5rem;
+  }
+}
+.first {
+  background-color: white;
+  font-family: "Karla", sans-serif;
+  padding: 2rem 1rem;
+}
+.first h1 {
+  color: #2ab2af;
+  margin-bottom: 1rem;
+}
+.first h2 {
+  color: #c0df34;
+  font-size: 16px;
+  margin-bottom: 1rem;
+}
+.first p {
+  color: #98a6bd;
+  font-size: 16px;
+  margin-bottom: 1rem;
+}
+
+.second {
+  background-color: #2ab2af;
+  font-family: "Karla", sans-serif;
+  padding: 2rem 1rem;
+}
+.second h2 {
+  color: white;
+  font-size: 16px;
+  margin-bottom: 1rem;
+}
+.second p {
+  color: #e5eff5;
+  font-size: 16px;
+  padding-bottom: 0.5rem;
+}
+.second p strong {
+  font-size: 32px;
+  color: white;
+}
+.second p:nth-child(3) {
+  color: white;
+  padding-bottom: 2rem;
+}
+.second button {
+  background-color: #c0df34;
+  color: white;
+  width: 100%;
+  padding: 1rem 0;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.third {
+  background-color: #2ab2af;
+  opacity: 85%;
+  font-family: "Karla", sans-serif;
+  padding: 2rem 1rem;
+}
+.third h2 {
+  color: white;
+  font-size: 16px;
+  margin-bottom: 1rem;
+}
+.third p {
+  color: #e5eff5;
+  font-size: 16px;
+  padding-bottom: 0.5rem;
+  white-space: pre-line;
+}
+
+/*# sourceMappingURL=style.css.map */
